@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Formulaire JQ</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JQuery Google CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- JQuery Google CDN End-->
+
+</head>
+<body>
+
+    <header>
+        <h1>Formulaire d'inscription <br>
+        Test JQuery </h1>
+    </header>
+
+    <section>
+        <form action="">
+            <div>
+                <label for="nom">Nom :</label>
+                <input type="text" name="nom" id="nom" class="nameInput" pattern="[a-zA-ZÀ-ÿ]{2,}" minlength="2" required>
+            </div>
+            <div>
+                <label for="prenom">Prénom :</label>
+                <input type="text" name="prenom" id="prenom" class="nameInput" pattern="[a-zA-ZÀ-ÿ]{2,}" minlength="2" required>
+            </div>
+            <div>
+                <label for="pseudo">Pseudo : </label>
+                <input type="text" name="pseudo" id="pseudo" class="pseudoInput" pattern="[a-zA-ZÀ-ÿ0-9]{4,20}" minlength="5" maxlength="20" required>
+            </div>
+            <div>
+                <label for="email">E-mail :</label>
+                <input type="text" name="email" id="email">
+            </div>
+            <div>
+                <label for="motDePasse">Mot de passe :</label>
+                <input type="password" name="motDePasse" id="motDePasse" class="passwordInput" pattern="[a-zA-ZÀ-ÿ0-9]{8,20}"  minlength="8" maxlength="20" required>
+            </div>
+            <div>
+                <label for="motDePasseConfirmation">Confirmation mot de passe :</label>
+                <input type="password" name="motDePasseConfirmation" id="motDePasseConfirmation" class="passwordInput" pattern="[a-zA-ZÀ-ÿ0-9]{8,20}"  minlength="8" maxlength="20" required>
+                <p class="alertPassword">Attention mot de passe non identique !</p>
+            </div>
+            <div id="button">
+                <button class="reset" type="reset" id="reset">Annuler</button>
+                <button class="reset" type="submit" id="submit">Envoyer</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- JQuery -->
+    <script src="formulaire.js"></script>
+    
+</body>
+</html>
